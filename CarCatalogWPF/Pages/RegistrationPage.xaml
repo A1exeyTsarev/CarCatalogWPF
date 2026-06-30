@@ -1,0 +1,22 @@
+﻿<Page x:Class="CarCatalogWPF.Pages.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarCatalogWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationPage">
+
+    <Grid Background="White">
+        <TextBox x:Name="TbLogin" HorizontalAlignment="Left" Margin="439,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="42" TextChanged="TextBox_TextChanged" FontSize="18"/>
+        <Button x:Name="BtnBack" Content="Назад" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Height="50" Width="130" FontSize="20" Click="BtnLogin_Click"/>
+        <Button x:Name="BtnRegister" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="312,364,0,0" VerticalAlignment="Top" Height="50" Width="208" FontSize="20" Click="BtnRegister_Click"/>
+        <PasswordBox x:Name="PbPassword" HorizontalAlignment="Left" Margin="439,191,0,0" VerticalAlignment="Top" Width="150" Height="38"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="138" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"><Run Text="Повторите "/><LineBreak/><Run Text="пароль"/></TextBlock>
+        <PasswordBox x:Name="PbPasswordRepeat" HorizontalAlignment="Left" Margin="439,260,0,0" VerticalAlignment="Top" Width="150" Height="42"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="97" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"><Run Language="ru-ru" Text="П"/><Run Text="ароль"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="260,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="86" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="296,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="239" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"><Run Language="ru-ru" Text="Регистрация"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+    </Grid>
+</Page>

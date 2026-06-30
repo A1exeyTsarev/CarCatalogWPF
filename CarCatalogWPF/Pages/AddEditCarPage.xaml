@@ -1,0 +1,73 @@
+﻿<Page x:Class="CarCatalogWPF.Pages.AddEditCarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="474" d:DesignWidth="800"
+      Title="AddEditCarPage"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ===== КОЛОНКА 1: ФОТОГРАФИЯ ===== -->
+        <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center">
+            <TextBlock Text="🚗 Фотография автомобиля" FontSize="18" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+            <Border BorderBrush="#E0E0E0" BorderThickness="2" CornerRadius="10" 
+                    Height="300" Width="400" HorizontalAlignment="Center">
+                <Image x:Name="PhotoImage" Stretch="Uniform" 
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            <Button x:Name="BtnLoadImage" Content="📁 Выбрать фото" 
+                    Click="LoadImageButton_Click" 
+                    Height="35" Margin="0,15,0,0"
+                    Background="#3498DB" Foreground="White"
+                    FontWeight="Bold"/>
+
+            <TextBlock x:Name="TbImageName" Text="Файл не выбран" 
+                       HorizontalAlignment="Center" Margin="0,5,0,0" Foreground="Gray"/>
+        </StackPanel>
+
+        <!-- ===== КОЛОНКА 2: ФОРМА ===== -->
+        <StackPanel Grid.Column="1" Margin="10,20,10,0">
+            <TextBlock Text="📝 Информация" FontSize="18" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+            <TextBlock Text="Марка:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CbBrand" DisplayMemberPath="BrandName" SelectedValuePath="IdBrand" 
+                      Height="30" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Страна:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CbCountry" DisplayMemberPath="NameCountry" SelectedValuePath="IdCountry" 
+                      Height="30" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Год выпуска:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbYear" Height="30" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Цена (руб.):" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox x:Name="TbPrice" Height="30" Margin="0,0,0,10"/>
+
+            <TextBlock x:Name="TbError" Foreground="Red" Margin="0,10,0,0" 
+                       Visibility="Hidden" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+
+            <Button x:Name="BtnSave" Content="💾 Сохранить" 
+                    Click="BtnSave_Click" 
+                    Height="35" Margin="0,15,0,0" 
+                    Background="#2ECC71" Foreground="White"
+                    FontWeight="Bold" FontSize="15"/>
+
+            <Button x:Name="BtnCancel" Content="❌ Отмена" 
+                    Click="BtnCancel_Click" 
+                    Height="35" Margin="0,8,0,0" 
+                    Background="#95A5A6" Foreground="White"
+                    FontWeight="SemiBold" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Page>
